@@ -1,0 +1,29 @@
+/* formatting for composite image */
+#compositeJPG{
+    /* float: left; */
+    float: top;
+    margin: 0 0 0 0;
+  }
+
+
+
+.wrapper {
+    
+    width: 10%;
+    height: 25%;
+    border: 1px solid red;
+}
+
+.box {
+    margin: left;
+    
+    width: 150px;
+    height: 28%;
+    background: green;
+}
+
+.div1 {
+    margin: auto;
+    width: 150px;
+    height: 28%;
+}

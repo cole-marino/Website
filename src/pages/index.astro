@@ -1,0 +1,120 @@
+---
+import Icon from '../components/icon.astro'
+import Navigation from '../components/NavigationBar.astro';
+import '../styles/global.css'
+import '../styles/index.css'
+const text = 'text';
+const margin = 'margin';
+const info = 'info';
+
+---
+
+<!--
+	This is the astro file for my main site landing page!
+
+	@Author: Cole Marino
+	@Author: cole1.marino@gmail.com
+
+
+I see you are reading my code!
+		╭─────╮
+		│ ◠ ◡ ◠
+		╰─────╯
+	Thanks for validating my work!
+
+Hope you have a great day, friend!
+-CVM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Nicola Vittorio Marino</title>
+		<link rel="stylesheet" href="/path/to/your/css/styles.css">
+	</head>
+
+
+	<style is:global>
+		.text{
+        	color: rgb(224, 224, 224);
+    	}
+
+		.info{
+			padding-left: 15%;
+			font: bold;
+			font-size: 28px;
+			width: 15%;
+			height: 100%;
+			background: clear;
+			white-space: nowrap;
+		}
+		
+
+	</style>
+
+
+	<body>
+		<!-- side bar stuff! -->
+		<head>
+			<h1  style= "text-shadow: 5px 5px black; color: white; text-align:center; font-size:500%; font-family:verdana;">Hello there! 👋</h1>
+		</head>
+
+		<!-- main body -->
+		<body style="background: linear-gradient(200deg, darkblue 10%, blue 25%, lightblue 80%, powderblue 100%); ">
+			
+
+			<!-- all the main website stuff! -->
+			<main>
+
+				<!-- adds site navigation! -->
+				<div class = "wrapper"
+				style = "padding-left: 15%; width: 85%; 
+					font: bold; font-size: 28px;
+					  background: clear;
+					  "
+				>
+					<div class = "wrapper"
+					style = "margin: left; width: 11.5%;"
+					>
+						
+						<div class="box" style="margin:left;">
+							<a href="/" class = {text, margin}>🏠 Home</a>
+						</div>
+						<div class="box" style="margin:left;">
+							<a href="/about/" class = {text, margin}>❓ About</a>
+						</div>
+						<div class="box" style="margin:left;">
+							<a href="/contact/" class = {text, margin}>📧 Contact</a>
+						</div>
+						
+						
+					</div>
+					<div class="wrapper" style = "margin: auto;">
+						<img src="../public/images/composite.JPG" alt="Composite" width = "25%" height = 25%" style = "border-radius: 5%; margin: auto;" id="compositeJPG">
+					</div>
+
+
+				<!-- personal introduction -->
+				<div class = "box" style = "margin: auto;">
+					<img src="../public/images/composite.JPG" alt="Composite" width = "50%" height = "50%" style = "border-radius: 5%; padding-bottom: 0%;" id="compositeJPG">
+				</div>
+				
+				
+			</main>
+
+			<!-- copyright info -->
+			<footer style = "text-align: center;">
+				<p>&copy; 2023 Nicola Vittorio Marino. All rights reserved.</p>
+			</footer>
+
+		</body>
+
+		<!-- Astro runtime -->
+		<script type="module" src="website\src\components\nav.js"></script>
+	
+</html>
+
+
+
