@@ -14,7 +14,7 @@ import '../styles/global.css'
 <html lang="en">
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Contact Me!</title>
+			<title>Contact Me</title>
 		<link rel="stylesheet" href="/path/to/your/css/styles.css">
 
     <body>
@@ -28,8 +28,32 @@ import '../styles/global.css'
         </head>
 
 
-        <main>
+        <main style="padding-bottom: 2%;">
+            <!-- contact information -->
+            <span style="white-space: nowrap; padding-bottom: 3%;">
 
+                <!-- draws the directory and other effects (which are very pretty) -->
+                <nav class="flex sm:justify-center space-x-4" style="font-size: 35px; padding-top: 3%; padding-bottom: 1%; padding-left: 0%;">
+                    {[
+                        ['📱 Phone:', '(860)930-7049'],
+                        ['📧 E-Mail:', ' cole1.marino@gmail.com'],
+                        ['🔗 LinkedIn:', ' \'Nicola Marino\'']
+                    ].map(([title, info]) => (
+                        <div>
+                            <p style="padding-right: 10%;">{title}</a>  <!-- TODO: FIX THIS -->
+                            <i style="padding-right: 10%;">{info}</i>
+                        </div>
+                    ))}
+                    </nav>
+            </span>
+
+
+            <!-- disclamer -->
+            <b>
+                <i style="font-size: 15px; color: black; padding-left: 25%; padding-bottom: 5%; padding-left: 30%;">
+                    *When reaching out with your name, purpose for reaching out, and affiliation. Thank you.
+                </i>
+            </b>
         </main>
 
         
