@@ -20,7 +20,7 @@ import '../styles/global.css'
     <body>
         <!-- header -->
         <head>
-            <h1  style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:600%; font-family:verdana;">
+            <h1  style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
                 <b>
                     Contact Me! 📧
                 </b>
@@ -28,32 +28,49 @@ import '../styles/global.css'
         </head>
 
 
-        <main style="padding-bottom: 2%;">
+        <main style="padding-bottom: 20px; padding-top: 50px;">
             <!-- contact information -->
-            <span style="white-space: nowrap; padding-bottom: 3%;">
+            <span class="flex:justify-center" style="white-space: nowrap;">
+                <div class = "flex items-center" style="padding-bottom: 60px; padding-left: 800px;">
 
-                <!-- draws the directory and other effects (which are very pretty) -->
-                <nav class="flex sm:justify-center space-x-4" style="font-size: 35px; padding-top: 3%; padding-bottom: 1%; padding-left: 0%;">
-                    {[
-                        ['📱 Phone:', '(860)930-7049'],
-                        ['📧 E-Mail:', ' cole1.marino@gmail.com'],
-                        ['🔗 LinkedIn:', ' \'Nicola Marino\'']
-                    ].map(([title, info]) => (
-                        <div>
-                            <p style="padding-right: 10%;">{title}</a>  <!-- TODO: FIX THIS -->
-                            <i style="padding-right: 10%;">{info}</i>
+                    <!-- temporary image placeholder -->
+                    <img src="../public/images/COMPOSITE.PNG" alt="Composite" width = "425px" height = "513px" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
+
+                    <!-- draws the directory and other effects (which are very pretty) -->
+                    <div>
+                        <nav class="" style="font-size: 35px; padding-left: 80px;">
+                            {[
+                                ['📱 Phone:', '+1 (860)930-7049'],
+                                ['📧 E-Mail:', ' cole1.marino@gmail.com'],
+                                ['🔗 LinkedIn:', ' \'Nicola Marino\''],
+                                ['👨‍💻 Github:', ' @cole-marino']
+                            ].map(([title, info]) => (
+                                <div>
+                                    <p style="padding-right: 10%;">{title}</a>  <!-- TODO: FIX THIS -->
+                                    <i style="padding-right: 10%; font-size: 30px;">{info}</i>
+                                </div>
+                            ))}
+                            </nav>
                         </div>
-                    ))}
-                    </nav>
+                    </div>
             </span>
 
 
             <!-- disclamer -->
-            <b>
-                <i style="font-size: 15px; color: black; padding-left: 25%; padding-bottom: 5%; padding-left: 30%;">
-                    *When reaching out with your name, purpose for reaching out, and affiliation. Thank you.
-                </i>
-            </b>
+            <div>
+                <b>
+                    <i style="font-size: 15px; color: black; padding-left: 25%; padding-left: 800px;">
+                        *When reaching out, please include your name, affiliation, and purpose for reaching out. Thank you.
+                    </i>
+                </b>
+            </div>
+
+            <!-- home button -->
+            <div>
+                <p style="padding-top: 70px; text-color: white; text-align:center; font-size:30px; font-family:verdana;">
+                    <a href={'/'} class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">🏠 Home</a>
+                </p>
+            </div>
         </main>
 
         
