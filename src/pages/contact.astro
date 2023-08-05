@@ -28,10 +28,10 @@ import '../styles/global.css'
         </head>
 
 
-        <main style="padding-bottom: 20px; padding-top: 50px;">
+        <main style="padding-bottom: 2%; padding-top: 3%">
             <!-- contact information -->
             <span class="flex:justify-center" style="white-space: nowrap;">
-                <div class = "flex items-center" style="padding-bottom: 60px; padding-left: 800px;">
+                <div class = "flex items-center" style="padding-bottom: 3%; padding-left: 32%">
 
                     <!-- temporary image placeholder -->
                     <img src="../public/images/COMPOSITE.PNG" alt="Composite" width = "425px" height = "513px" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
@@ -41,12 +41,12 @@ import '../styles/global.css'
                         <nav class="" style="font-size: 35px; padding-left: 80px;">
                             {[
                                 ['📱 Phone:', '+1 (860)930-7049'],
-                                ['📧 E-Mail:', ' cole1.marino@gmail.com'],
-                                ['🔗 LinkedIn:', ' \'Nicola Marino\''],
-                                ['👨‍💻 Github:', ' @cole-marino']
+                                ['📧 E-Mail:', 'cole1.marino@gmail.com'],
+                                ['🔗 LinkedIn:', '\'Nicola Marino\''],
+                                ['👨‍💻 Github:', '@cole-marino']
                             ].map(([title, info]) => (
                                 <div>
-                                    <p style="padding-right: 10%;">{title}</a>  <!-- TODO: FIX THIS -->
+                                    <p style="padding-right: 10%; padding-top: 2%;">{title}</a>  <!-- TODO: FIX THIS -->
                                     <i style="padding-right: 10%; font-size: 30px;">{info}</i>
                                 </div>
                             ))}
@@ -64,16 +64,9 @@ import '../styles/global.css'
                     </i>
                 </b>
             </div>
-
-            <!-- home button -->
-            <div>
-                <p style="padding-top: 70px; text-color: white; text-align:center; font-size:30px; font-family:verdana;">
-                    <a href={'/'} class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">🏠 Home</a>
-                </p>
-            </div>
         </main>
 
-        
+        <!-- default footer! -->
         <Footer>
     </body>
 
