@@ -34,10 +34,69 @@ import '../styles/global.css'
             <!-- TODO: Try to implement functional versions of these projects! -->
         <main>
 
+            <!-- creates board of coding projects! -->
+            <span style="white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
+
+                <!-- draws the directory and other effects (which are very pretty) -->
+                    <!-- TODO: maybe make these link to different pages with more explanation instead -->
+                <nav class="flex sm:justify-center space-x-4 items-center" style="padding-top: 2%; padding-bottom: 2%;">
+                    {[
+                      ['Website & E-Portfolio', '../public/images/projects/website/website.png', 'https://github.com/cole-marino/Website',  'Python, HTML, CSS, Astro',
+                      'You are currently experiencing the outcome of this personal project. As HTML, CSS, or Astro is not part of my academic program, I took the initiative to learn these languages myself out of pure passion for creating!'],
+                      ['AI Stock Analysis and Predictor [WIP]', '../public/images/COMPOSITE.PNG', '/contact', 'Python, C, HTML, CSS, Astro', 
+                      'add a description later..'],
+                      ['default name', '../public/images/COMPOSITE.PNG', 'tmp', 'code.', 
+                      'add a description later..'],
+                    ].map(([title, image, url, codeLangs, desc]) => (
+                        <div>
+                            <!-- creates individual bubbles for each project -->
+                                <!-- Refer to this for sizes: https://tailwindcss.com/docs/width -->
+                            <a href={url} class="w-96 h-96 rounded-full bg-white flex items-center justify-center font-medium hover:scale-[105%] hoverImgEffect" style="border-radius: 1rem;">
+
+                                <div>
+                                    <!-- image -->
+                                    <div>
+                                        <img src={image} alt="Composite" width = "90%"  style = "border-radius: 5%;" id="compositePNG">
+                                    </div>
+                                    <!-- contents of bubble -->
+                                    <div class="flex items-center" style="">
+                                        <!-- image covering top of square -->
+
+
+                                        <!-- project title -->
+                                        <div class="align-text-top" style="padding-left: 2%; padding-right: 2%;">
+                                            <b class="align-text-top" style="font-size: 20px; text-align: top;">
+                                                <u>
+                                                    {title}
+                                                </u>
+                                            </b>
+                                            <!-- descriptions -->
+                                            <div style="white-space: wrap;">
+                                                
+                                                <i style="padding-top: 0%;">
+                                                    Languages: {codeLangs}
+                                                </i>
+                                                <p style="padding-top: 5%;">
+                                                    {desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
+                  </nav>
+            </span>
         </main>
 
         <!-- standard copyright info footer -->
-        <Footer>
+        <footer>
+            <i style="font-size: 100%; color: yellow; padding-top: 1%; text-align: center;">
+                *You can click on any of these projects for redirection to a page with greater elaboration.
+            </i>
+            <Footer>
+        </footer>
 
     </body>
 
