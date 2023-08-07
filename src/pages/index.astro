@@ -1,5 +1,5 @@
 ---
-import Footer from '../components/Footer.astro'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Icon from '../components/icon.astro'
 import '../styles/global.css'
 import '../styles/index.css'
@@ -27,7 +27,7 @@ Hope you have a great day, friend!
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<DefaultLayout title={"Nicola Vittorio Marino"}>
 	<head>
 	<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,15 +132,12 @@ Hope you have a great day, friend!
 				
 			</main>
 
-			<!-- standard copyright info -->
-			<Footer>
-
 		</body>
 
 		<!-- Astro runtime -->
 		<script type="module" src="website\src\components\nav.js"></script>
 	
-</html>
+</DefaultLayout>
 
 
 
