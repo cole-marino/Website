@@ -16,7 +16,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
         <head>
             <h1  style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
                 <b>
-                    Contact Me! 📧
+                    Contact Me 📧
                 </b>
             </h1>
         </head>
@@ -24,24 +24,30 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
         <main style="padding-bottom: 2%; padding-top: 3%">
             <!-- contact information -->
-            <span class="flex:justify-center" style="white-space: nowrap;">
-                <div class = "flex items-center" style="padding-bottom: 3%; padding-left: 32%">
+            <span class="flex sm:justify-center" style="white-space: nowrap;">
+                <div class = "flex items-center" style=" padding-bottom: 3%; ">
 
                     <!-- temporary image placeholder -->
                     <img src="../public/images/COMPOSITE.PNG" alt="Composite" width = "425px" height = "513px" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
 
                     <!-- draws the directory and other effects (which are very pretty) -->
                     <div>
-                        <nav class="" style="font-size: 35px; padding-left: 80px;">
+                        <nav style="font-size: 35px; padding-left: 10%;">
                             {[
-                                ['📱 Phone:', '+1 (860)930-7049'],
-                                ['📧 E-Mail:', 'cole1.marino@gmail.com'],
-                                ['🔗 LinkedIn:', '\'Nicola Marino\''],
-                                ['👨‍💻 Github:', '@cole-marino']
-                            ].map(([title, info]) => (
-                                <div>
-                                    <p style="padding-right: 10%; padding-top: 2%;">{title}</a>  <!-- TODO: FIX THIS -->
-                                    <i style="padding-right: 10%; font-size: 30px;">{info}</i>
+                                ['📱 Phone:', '+1 (860)930-7049', 'Tel: 123-456-7890'],
+                                ['📧 E-Mail:', 'cole1.marino@gmail.com', 'mailto: cole1.marino@gmail.com'],
+                                ['🔗 LinkedIn:', '\'Nicola Marino\'', 'https://www.linkedin.com/in/nicola-marino-5761601b4/'],
+                                ['👨‍💻 Github:', '@cole-marino', 'https://github.com/cole-marino']
+
+                            ].map(([title, info, url]) => (
+                                <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[115%] hoverImgEffect rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+                                    <p style="padding-right: 15%; padding-top: 2%;">{title}</a>  <!-- TODO: FIX THIS -->
+                                    
+                                    <!-- links to email and other accounts -->
+                                    <a href={url} target="_blank">
+                                        <i style="padding-right: 15%; font-size: 30px;">{info}</i>
+                                    </a>
+                                    
                                 </div>
                             ))}
                             </nav>
