@@ -1,6 +1,5 @@
 ---
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
 
@@ -29,14 +28,7 @@ import '../styles/global.css'
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Page not found!</title>
-		<link rel="stylesheet" href="/path/to/your/css/styles.css">
-    
-    
+<DefaultLayout title={"Page Not Found!"}>
     <body>
         <!-- header! -->
 		<head>
@@ -61,10 +53,7 @@ import '../styles/global.css'
                 </u>
             </div>
         </main>
-
-        <!-- default copyright footer, as always! -->
-        <Footer>
     </body>
 
-</head>
+</DefaultLayout>
 

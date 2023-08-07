@@ -1,6 +1,5 @@
 ---
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
 <!--
@@ -11,12 +10,7 @@ import '../styles/global.css'
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Contact Me</title>
-		<link rel="stylesheet" href="/path/to/your/css/styles.css">
-
+<DefaultLayout title={"Contact Me"}>
     <body>
         <!-- header -->
         <head>
@@ -65,10 +59,7 @@ import '../styles/global.css'
                 </b>
             </div>
         </main>
-
-        <!-- default footer! -->
-        <Footer>
     </body>
 
 
-</html>
+</DefaultLayout>

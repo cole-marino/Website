@@ -1,0 +1,45 @@
+---
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+
+const {title} = Astro.props
+
+---
+
+<html lang="en">
+
+    <style is:global>
+        .text{
+            color: rgb(224, 224, 224);
+            white-space: nowrap;
+        }
+
+        .info{
+            padding-left: 15%;
+            font: bold;
+            font-size: 28px;
+            width: 20%;
+            height: 100%;
+            background: clear;
+            white-space: nowrap;
+        }
+        
+
+    </style>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-auto bg-no-repeat " style="">
+        <section class="container--main">
+            <slot/>
+        </section>
+	</body>
+    <footer>
+        <Footer>
+    </footer>
+</html>
