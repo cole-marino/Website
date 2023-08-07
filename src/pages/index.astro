@@ -83,25 +83,25 @@ Hope you have a great day, friend!
 								<!-- image... duh! Also, this links to the resume -->
 								<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
 									<a href={"./contact"}>
-										<img src="../public/images/COMPOSITE.PNG" alt="Composite" class="m-1 rounded-2xl" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
+										<img src="../public/images/COMPOSITE.PNG" alt="Composite" class="m-1 rounded-2xl" id="compositePNG">
 									</a>
 								</div>
 								
 								<!-- personal description :) -->
 								<div style="padding-left: 4%">
 									<p class="font-extrabold" style="font-family: Verdana;">
-										<span class="bg-gradient-to-r from-red-500 to-yellow-500 text-transparent bg-clip-text" style="font-size: 40px;">
+										<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 45px;">
 											Welcome to my website
 										</span>
 									</p>
 
 									<!-- bio -->
-									<div style="padding-left: 1%; font-size: 25px;">
+									<div class="text-center" style="padding-left: 1%; font-size: 25px;">
 										<br>
 											I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
 											My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
-											With a modding career for 'Minecraft' igniting my passion at a young age, I've been captivated by programming, critical thinking, and problem-solving. 
-											This website showcases all my Computer Science projects, credentials, and services.
+											Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
+											This website showcases all my professional projects, credentials, and services.
 										</br>
 									</div>
 									
@@ -110,24 +110,35 @@ Hope you have a great day, friend!
 							
 						</div>
 
-						<!-- web page directory -->
-						<span class="font-bold text-3xl mt-2 mb-4" style="font-size: 38px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
+						
+					</div>
+					
+					<!-- web page directory -->
+					<div class="">
+						<span class="font-bold text-4x2 mt-2 mb-4" style="font-size: 40px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
 
 							<!-- draws the directory and other effects (which are very pretty) -->
-							<nav class="flex sm:justify-center space-x-4 " style="padding-top: 8%; padding-bottom: 5%; padding-left: 2%;">
+							<nav class="flex sm:justify-center space-x-4" style="padding-top: 8%; padding-bottom: 5%;">
 								{[
-								  ['❓ About', '/about'],
-								  ['📧 Contact', '/contact'],
-								  ['📄 Résumé', '/resume'],
-								  ['👨‍💻 Projects', '/projects'],
-								  ['👨🏻‍🔧 Services', '/services'],
-								].map(([title, url]) => (
-								  <a href={url} class="rounded-lg px-3 py-2 text-slate-900 font-medium hover:bg-slate-100 c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[110%]">{title}</a>
+								['❓', 'About', '/about'],
+								['📧', 'Contact', '/contact'],
+								['📄', 'Résumé', '/resume'],
+								['👨‍💻', ' Projects', '/projects'],
+								['👨🏻‍🔧', ' Services', '/services'],
+								].map(([emoji, title, url]) => (
+									<a href={url} class="rounded-lg px-2 py-2 text-slate-900 font-medium hover:bg-slate-100 c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
+										<!-- this needs to be separate so the emoji isnt a weird color -->
+										<p style="font-size: 45px;">
+											{emoji}
+											<span class="bg-gradient-to-r from-blue-800 to-blue-500 text-transparent font-bold text-transparent hoverImgEffect bg-clip-text" style="font-size: 40px;">
+												{title}
+											</span>
+										</p>
+									</a>
 								))}
-							  </nav>
+							</nav>
 						</span>
 					</div>
-				
 			</main>
 
 		</body>
