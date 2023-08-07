@@ -78,26 +78,32 @@ Hope you have a great day, friend!
 						<div>
 
 							<!-- composite image & description -->
-							<div class = "flex items-center" style="padding-left: 15px;">
+							<div class = "flex items-center" style="padding-left: 5%;">
 
-								<!-- image... duh -->
-								<img src="../public/images/COMPOSITE.PNG" alt="Composite" width = "425px" height = "513px" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
+								<!-- image... duh! Also, this links to the resume -->
+								<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
+									<a href={"./contact"}>
+										<img src="../public/images/COMPOSITE.PNG" alt="Composite" class="m-1 rounded-2xl" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
+									</a>
+								</div>
 								
 								<!-- personal description :) -->
-								<div style="padding-left: 5%; font-size: 25px;">
-									<p>
-										<b style="font-size: 35px;">
+								<div style="padding-left: 4%">
+									<p class="font-extrabold" style="font-family: Verdana;">
+										<span class="bg-gradient-to-r from-red-500 to-yellow-500 text-transparent bg-clip-text" style="font-size: 40px;">
 											Welcome to my website
-										</b>
+										</span>
 									</p>
 
 									<!-- bio -->
-									<br>
-										I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
-										My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
-										With a modding career for 'Minecraft' igniting my passion at a young age, I've been captivated by programming, critical thinking, and problem-solving. 
-										This website showcases all my Computer Science projects, credentials, and services.
-									</br>
+									<div style="padding-left: 1%; font-size: 25px;">
+										<br>
+											I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
+											My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
+											With a modding career for 'Minecraft' igniting my passion at a young age, I've been captivated by programming, critical thinking, and problem-solving. 
+											This website showcases all my Computer Science projects, credentials, and services.
+										</br>
+									</div>
 									
 								</div>
 							</div>
@@ -105,10 +111,10 @@ Hope you have a great day, friend!
 						</div>
 
 						<!-- web page directory -->
-						<span style="white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
+						<span class="font-bold text-3xl mt-2 mb-4" style="font-size: 38px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
 
 							<!-- draws the directory and other effects (which are very pretty) -->
-							<nav class="flex sm:justify-center space-x-4" style="padding-top: 5%; padding-bottom: 5%; padding-left: 2%;">
+							<nav class="flex sm:justify-center space-x-4 " style="padding-top: 8%; padding-bottom: 5%; padding-left: 2%;">
 								{[
 								  ['❓ About', '/about'],
 								  ['📧 Contact', '/contact'],
@@ -116,7 +122,7 @@ Hope you have a great day, friend!
 								  ['👨‍💻 Projects', '/projects'],
 								  ['👨🏻‍🔧 Services', '/services'],
 								].map(([title, url]) => (
-								  <a href={url} class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
+								  <a href={url} class="rounded-lg px-3 py-2 text-slate-900 font-medium hover:bg-slate-100 c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[110%]">{title}</a>
 								))}
 							  </nav>
 						</span>
