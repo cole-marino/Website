@@ -83,12 +83,12 @@ Hope you have a great day, friend!
 								<!-- image... duh! Also, this links to the resume -->
 								<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
 									<a href={"./contact"}>
-										<img src="../public/images/COMPOSITE.PNG" alt="Composite" class="m-1 rounded-2xl" id="compositePNG">
+										<img src="../public/images/COMPOSITE.PNG" alt="Composite" class="m-4 rounded-2xl" id="compositePNG">
 									</a>
 								</div>
 								
 								<!-- personal description :) -->
-								<div style="padding-left: 4%">
+								<div class="text-center" style="padding-left: 4%">
 									<p class="font-extrabold" style="font-family: Verdana;">
 										<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 45px;">
 											Welcome to my website
@@ -96,7 +96,7 @@ Hope you have a great day, friend!
 									</p>
 
 									<!-- bio -->
-									<div class="text-center" style="padding-left: 1%; font-size: 25px;">
+									<div style="padding-left: 1%; font-size: 25px;">
 										<br>
 											I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
 											My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
@@ -118,7 +118,7 @@ Hope you have a great day, friend!
 						<span class="font-bold text-4x2 mt-2 mb-4" style="font-size: 40px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
 
 							<!-- draws the directory and other effects (which are very pretty) -->
-							<nav class="flex sm:justify-center space-x-4" style="padding-top: 8%; padding-bottom: 5%;">
+							<nav class="flex sm: justify-center space-x-4" style="padding-top: 8%; padding-bottom: 5%;">
 								{[
 								['❓', 'About', '/about'],
 								['📧', 'Contact', '/contact'],
@@ -126,7 +126,7 @@ Hope you have a great day, friend!
 								['👨‍💻', ' Projects', '/projects'],
 								['👨🏻‍🔧', ' Services', '/services'],
 								].map(([emoji, title, url]) => (
-									<a href={url} class="rounded-lg px-2 py-2 text-slate-900 font-medium hover:bg-slate-100 c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
+									<a href={url} class="rounded-lg px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
 										<!-- this needs to be separate so the emoji isnt a weird color -->
 										<p style="font-size: 45px;">
 											{emoji}
