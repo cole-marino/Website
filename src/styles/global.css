@@ -1,12 +1,49 @@
 /* */
 
+:root {
+  --accent-light: #c561f6;
+  --accent-regular: #7611a6;
+  --accent-dark: #1c0056;
+  --accent-overlay: hsla(280, 89%, 67%, 0.33);
+  --accent-subtle-overlay: var(--accent-overlay);
+  --accent-text-over: var(--gray-999);
+      /* Gradients */
+  --gradient-stop-1: var(--accent-light);
+  --gradient-stop-2: var(--accent-regular);
+  --gradient-stop-3: var(--accent-dark);
+  --gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
+  --gradient-accent: linear-gradient(
+      150deg,
+      var(--gradient-stop-1),
+      var(--gradient-stop-2),
+      var(--gradient-stop-3)
+  );
+  --gradient-accent-orange: linear-gradient(
+      150deg,
+      #ca7879,
+      var(--accent-regular),
+      var(--accent-dark)
+  );
+  --gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
+  }
+
+
+/* basically adds the slow expansion of an image when hovering over it */
+.hoverImgEffect {
+    transition: all 0.3s ease-in-out;
+}
+
+/* the default CSS for anything within an html structure */
 html{
     background-image: linear-gradient(155deg, darkblue 5%, blue 15%, cyan 40%, skyblue 60%, lightblue 80%, powderblue 100%);
+    /*background-image: linear-gradient(190deg, var(--accent-regular) 10%, var(--accent-light) 30%, var(--accent-overlay)60%, white 100%);*/
+    background-image: linear-gradient(190deg, var(--accent-regular) 5%, var(--accent-light) 20%, var(--accent-overlay)50%, white 80%);
     height: 100%;
     width: 100%;
     font-family: "Roboto";
 }
-  
+
+
 body{
   margin: 0 auto;
   width: 100%;
