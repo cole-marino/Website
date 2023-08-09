@@ -83,7 +83,7 @@ Hope you have a great day, friend!
 								<!-- image... duh! Also, this links to the resume -->
 								<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
 									<a href={"./contact"}>
-										<img src="images/COMPOSITE.PNG" alt="Composite" class="m-4 rounded-2xl" id="compositePNG">
+										<img src="./images/COMPOSITE.PNG" alt="Composite" class="m-4 rounded-2xl" id="compositePNG">
 									</a>
 								</div>
 								
@@ -120,11 +120,11 @@ Hope you have a great day, friend!
 							<!-- draws the directory and other effects (which are very pretty) -->
 							<nav class="flex sm: justify-center space-x-4" style="padding-top: 8%; padding-bottom: 5%;">
 								{[
-								['❓', 'About', '/about'],
-								['📧', 'Contact', '/contact'],
-								['📄', 'Résumé', '/resume'],
-								['👨‍💻', ' Projects', '/projects'],
-								['👨🏻‍🔧', ' Services', '/services'],
+								['❓', 'About', './about'],
+								['📧', 'Contact', './contact'],
+								['📄', 'Résumé', './resume'],
+								['👨‍💻', ' Projects', './projects'],
+								['👨🏻‍🔧', ' Services', './services'],
 								].map(([emoji, title, url]) => (
 									<a href={url} class="rounded-lg px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
 										<!-- this needs to be separate so the emoji isnt a weird color -->
