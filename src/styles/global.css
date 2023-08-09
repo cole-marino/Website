@@ -35,9 +35,11 @@
 
 /* the default CSS for anything within an html structure */
 html{
-    background-image: linear-gradient(155deg, darkblue 5%, blue 15%, cyan 40%, skyblue 60%, lightblue 80%, powderblue 100%);
+    /*background-image: linear-gradient(155deg, darkblue 5%, blue 15%, cyan 40%, skyblue 60%, lightblue 80%, powderblue 100%);*/
     /*background-image: linear-gradient(190deg, var(--accent-regular) 10%, var(--accent-light) 30%, var(--accent-overlay)60%, white 100%);*/
     background-image: linear-gradient(190deg, var(--accent-regular) 5%, var(--accent-light) 20%, var(--accent-overlay)50%, white 80%);
+    background-repeat: no-repeat;
+    background-color: white;
     height: 100%;
     width: 100%;
     font-family: "Roboto";
