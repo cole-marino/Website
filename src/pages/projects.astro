@@ -4,14 +4,13 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 import { getCollection } from 'astro:content';
 
+/*
 const projects = (await getCollection('projects'));
 projects.filter((post) => !post.data.draft)
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
   .slice(0, 1);
+*/
 ---
-
-
-
 
 <!--
 	This page displays my personal coding-related projects! Hope you enjoy! 
@@ -45,6 +44,8 @@ projects.filter((post) => !post.data.draft)
                 
                 <!-- draws the directory and other effects (which are very pretty) -->
                     <!-- TODO: maybe make these link to different pages with more explanation instead -->
+
+                <!-- 
                 <div class="">
                     <ul class="flex flex-row flex-wrap mb-4 justify-center">
                     {
@@ -76,6 +77,7 @@ projects.filter((post) => !post.data.draft)
                     }
                     </ul>
                 </div>
+                -->
             </span>
         </main>
 
