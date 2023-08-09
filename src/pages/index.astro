@@ -65,55 +65,44 @@ Hope you have a great day, friend!
 
 			<!-- all the main website stuff! -->
 			<main>
+				<!-- center main information -->
+				<div class="inline">
+					<div class="mx-auto max-w-7xl px-6 lg:px-8 my-2">
+						<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
+							<div class="flex m-auto">
 
-				<!-- adds site navigation! -->
-				<div class = "wrapper"
-				style = "margin: left; padding-left: 25%; padding-right: 12.5%; padding-top: 2.5%; width: 85%;
-					font: bold; font-size: 35px;
-					  background: clear;
-					  "
-				>
-					<!-- center main information -->
-					<div class="inline">
-						<div class="mx-auto max-w-7xl px-6 lg:px-8 my-2">
-							<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
-								<div class="flex m-auto">
+								<!-- composite image & description -->
+								<div class = "flex items-center gap-16 mt-10 sm:flex-col lg:flex-row">
 
-									<!-- composite image & description -->
-									<div class = "flex items-center" style="padding-left: 5%;">
+									<!-- image... duh! Also, this links to the resume -->
+									<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
+										<a href={"./contact"}>
+											<img src="./images/COMPOSITE.png" alt="Composite" height="full" class="m-4 rounded-2xl" id="compositePNG">
+										</a>
+									</div>
+									
+									<!-- personal description :) -->
+									<div class="text-center">
+										<p class="font-extrabold" style="font-family: Verdana;">
+											<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 45px;">
+												Welcome to my website
+											</span>
+										</p>
 
-										<!-- image... duh! Also, this links to the resume -->
-										<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
-											<a href={"./contact"}>
-												<img src="./images/COMPOSITE.png" alt="Composite" height="full" class="m-4 rounded-2xl" id="compositePNG">
-											</a>
+										<!-- bio -->
+										<div style="padding-left: 1%; font-size: 25px;">
+											<br>
+												I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
+												My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
+												Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
+												This website showcases all my professional projects, credentials, and services.
+											</br>
 										</div>
 										
-										<!-- personal description :) -->
-										<div class="text-center" style="padding-left: 4%">
-											<p class="font-extrabold" style="font-family: Verdana;">
-												<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 45px;">
-													Welcome to my website
-												</span>
-											</p>
-
-											<!-- bio -->
-											<div style="padding-left: 1%; font-size: 25px;">
-												<br>
-													I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
-													My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
-													Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
-													This website showcases all my professional projects, credentials, and services.
-												</br>
-											</div>
-											
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						
 					</div>
 					
 					<!-- web page directory -->
@@ -121,7 +110,7 @@ Hope you have a great day, friend!
 						<span class="font-bold text-4x2 mt-2 mb-4" style="font-size: 40px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
 
 							<!-- draws the directory and other effects (which are very pretty) -->
-							<nav class="flex sm: justify-center space-x-4" style="padding-top: 8%; padding-bottom: 5%;">
+							<nav class="flex justify-center space-x-4 pt-20 pb-10" style="">
 								{[
 								['❓', 'About', './about'],
 								['📧', 'Contact', './contact'],
@@ -129,11 +118,11 @@ Hope you have a great day, friend!
 								['👨‍💻', ' Projects', './projects'],
 								['👨🏻‍🔧', ' Services', './services'],
 								].map(([emoji, title, url]) => (
-									<a href={url} class="rounded-lg px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
+									<a href={url} class="px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
 										<!-- this needs to be separate so the emoji isnt a weird color -->
 										<p style="font-size: 45px;">
 											{emoji}
-											<span class="bg-gradient-to-r from-blue-800 to-blue-500 text-transparent font-bold text-transparent hoverImgEffect bg-clip-text" style="font-size: 40px;">
+											<span class="bg-gradient-to-r from-blue-800 to-blue-500 font-bold text-transparent hoverImgEffect bg-clip-text" style="font-size: 40px;">
 												{title}
 											</span>
 										</p>
