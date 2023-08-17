@@ -50,7 +50,7 @@ Hope you have a great day, friend!
 	<body>
 		<!-- header! -->
 		<head>
-			<h1 class="lg:px-8" style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
+			<h1 class="lg:px-8 md:mb-4 mb-12" style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
 				<b>
 					Hello there! 👋
 				</b>
@@ -61,24 +61,25 @@ Hope you have a great day, friend!
 		
 		<body class="bg-gray-100">
     <!-- main body -->
+    <main class="md:p-4">
 
-    <!-- all the main website stuff! -->
-    <main class="md:p-8">
         <!-- center main information -->
-        <div class="mx-auto max-w-7xl">
-            <div class="mx-auto grid max-w-2xl gap-x-4 gap-y-4 md:max-w-none md:grid-cols-2">
+        <div class="m-auto max-w-7xl mt-12">
+            <div class="m-auto flex max-w-4xl gap-y-2 md:max-w-none items-center justify-center gap-4 flex-col md:flex-row">
+
                 <!-- composite image -->
-				<div class="scale-75">
-					<div class="mx-auto hover:scale-110 block shadow-lg rounded-2xl hoverImgEffect">
+				<div class="scale-[100%] ">
+					<div class="m-auto md:hover:scale-[110%] hover:scale-[105%] block shadow-lg rounded-2xl hoverImgEffect">
 						<a href="./contact">
-							<img src="./images/COMPOSITE.png" alt="Composite" class="m-4 rounded-2xl h-full" id="compositePNG">
+							<img src="./images/COMPOSITE.png" alt="Composite" class="rounded-2xl h-full" id="compositePNG">
 						</a>
 					</div>
 				</div>
-                <!-- personal description -->
-				<div class="text-center py-24">
 
-					<div class="py-16">
+                <!-- personal description -->
+				<div class="text-center px-8">
+
+					<div class="py-12">
 						<p class="font-extrabold" style="font-family: Verdana;">
 							<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 42px;">
 								Welcome to my website
@@ -86,9 +87,13 @@ Hope you have a great day, friend!
 						</p>
 
 						
-						<div style="padding-left: 1%; font-size: 28px;">
+						<div style="font-size: 28px;">
 							<br>
-								I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
+								I am 
+								<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text font-extrabold">
+									Nicola Marino
+								</span>
+								, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
 								My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
 								Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
 								This website showcases all my professional projects, credentials, and services.
@@ -99,53 +104,25 @@ Hope you have a great day, friend!
             </div>
         </div>
 
-		<!--
+		<!-- line separating bio and bottom -->
+		<div>
 
-			<div class = "flex items-center gap-16 mt-10 sm:flex-col lg:flex-row">
+		</div>
 
-									
-									<div class="mx-auto hover:scale-[105%] block drop-shadow-lg rounded-2xl hoverImgEffect">
-										<a href={"./contact"}>
-											<img src="./images/COMPOSITE.png" alt="Composite" height="full" class="m-4 rounded-2xl" id="compositePNG">
-										</a>
-									</div>
-									
-									
-									<div class="text-center">
-										<p class="font-extrabold" style="font-family: Verdana;">
-											<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 48px;">
-												Welcome to my website
-											</span>
-										</p>
-
-										
-										<div style="padding-left: 1%; font-size: 28px;">
-											<br>
-												I am Nicola Marino, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
-												My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
-												Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
-												This website showcases all my professional projects, credentials, and services.
-											</br>
-										</div>
-										
-									</div>
-								</div>
-		 -->
 
         <!-- web page directory -->
         <div class="mt-8">
-			<span class="font-bold text-4x2 mt-2 mb-4" style="font-size: 40px; white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
+			<span class="font-bold text-4x2 mt-2 mb-24 md:hover:scale-[110%] hover:scale-[105%] hoverImgEffect" style="font-size: 40px; white-space: nowrap;">
 
 				<!-- draws the directory and other effects (which are very pretty) -->
-				<nav class="flex justify-center space-x-4 pt-20 pb-10" style="">
+				<nav class="flex-wrap flex justify-center space-x-4 pt-10 pb-10" style="">
 					{[
-					['❓', 'About', './about'],
 					['📧', 'Contact', './contact'],
 					['📄', 'Résumé', './resume'],
 					['👨‍💻', ' Projects', './projects'],
 					['👨🏻‍🔧', ' Services', './services'],
 					].map(([emoji, title, url]) => (
-						<a href={url} class="px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
+						<a href={url} class="transition px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
 							<!-- this needs to be separate so the emoji isnt a weird color -->
 							<p style="font-size: 45px;">
 								{emoji}
