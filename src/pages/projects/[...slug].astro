@@ -1,0 +1,28 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+
+import "../../styles/global.css";
+
+//import FormattedDate from "../../components/FormattedDate.astro";
+//import Icon from "../../components/Icon.astro";
+//import Githubrepo from "../../components/Githubrepo";
+
+interface Items {
+  entry: CollectionEntry<"projects">;
+}
+
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+---

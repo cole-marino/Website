@@ -1,9 +1,14 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Icon from '../components/icon.astro'
+import ItemCard from '../components/ItemCard.astro'
+import { getCollection } from 'astro:content';
 const text = 'text';
 const margin = 'margin';
 const info = 'info';
+
+const projects = (await getCollection('projects'))
+  .filter((post) => !post.data.draft)
+  .slice(0, 4);
 
 ---
 
@@ -93,7 +98,7 @@ Hope you have a great day, friend!
 								<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text font-extrabold">
 									Nicola Marino
 								</span>
-								, also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
+								also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
 								My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
 								Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
 								This website showcases all my professional projects, credentials, and services.
@@ -135,6 +140,34 @@ Hope you have a great day, friend!
 				</nav>
 			</span>
 		</div>
+
+
+		<!-- featured work -->
+		<div>
+
+
+			<!-- featured text -->
+
+
+			<!-- item cards -->
+			 <div class="flex flex-row flex-wrap mb-4 justify-center">
+				{
+					projects.map((projects) => (
+						<ItemCard
+						title={projects.data.title}
+						description={projects.data.description}
+						date={projects.data.publishDate}
+						slug={projects.slug}
+						img={projects.data.img}
+						img_alt={projects.data.img_alt}
+						tags={projects.data.tags}
+						/> 
+					</>
+					))
+				}
+			</div>
+		</div>
+
     </main>
 </body>
 
