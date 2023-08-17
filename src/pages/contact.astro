@@ -24,15 +24,18 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
         <main style="padding-bottom: 2%; padding-top: 3%">
             <!-- contact information -->
-            <span class="flex sm:justify-center" style="white-space: nowrap;">
-                <div class = "flex items-center" style=" padding-bottom: 0.5%; ">
+            <span class="flex justify-center" style="white-space: nowrap;">
+                <div class = "flex justify-center items-center flex-col md:flex-row" style=" padding-bottom: 0.5%; ">
 
                     <!-- temporary image placeholder -->
-                    <img src="../public/images/COMPOSITE.PNG" alt="Composite" width = "425px" height = "513px" style = "pading-right: 5%; border-radius: 5%;" id="compositePNG">
+                    <div class="scale-[100%] md:w-[20%] w-[75%]">
+                        <img src="../public/images/COMPOSITE.PNG" alt="Composite" class="mr-4" style = "border-radius: 5%;" id="compositePNG">
+                    </div>
+
 
                     <!-- draws the directory and other effects (which are very pretty) -->
                     <div>
-                        <nav style="font-size: 40px; padding-left: 8%;">
+                        <nav class="flex-col flex space-x-4 md:mt-0 mt-8 pb-10" style="font-size: 40px; padding-left: 8%;">
                             {[
                                 ['📱 Phone:', '+1 (860)930-7049', 'Tel: 123-456-7890'],
                                 ['📧 E-Mail:', 'cole1.marino@gmail.com', 'mailto: cole1.marino@gmail.com'],
@@ -40,7 +43,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
                                 ['👨‍💻 Github:', '@cole-marino', 'https://github.com/cole-marino']
 
                             ].map(([title, info, url]) => (
-                                <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[110%]  rounded-lg px-8 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+                                <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[110%] px-8 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
                                     <!-- links to email and other accounts -->
                                     <a href={url} target="_blank">
                                     <u>
@@ -58,9 +61,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 
             <!-- disclamer -->
-            <div>
+            <div class="mt-4">
                 <b>
-                    <i style="font-size: 15px; color: black; padding-left: 25%; padding-left: 800px;">
+                    <i class="flex justify-center" style="font-size: 15px; color: black;">
                         *When reaching out, please include your name, affiliation, and purpose for reaching out. Thank you.
                     </i>
                 </b>
