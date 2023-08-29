@@ -110,14 +110,14 @@ Hope you have a great day, friend!
         </div>
 
 		<!-- line separating bio and bottom -->
-		<div class="flex justify-center mt-20 mb-4">
+		<div class="flex justify-center mt-28 mb-8">
 			<hr class="md:w-[52%] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
 		</div>
 
 
         <!-- web page directory -->
         <div>
-			<span class="font-bold text-4x2 mb-24 md:hover:scale-[110%] hover:scale-[105%] hoverImgEffect" style="font-size: 40px; white-space: nowrap;">
+			<span class="font-bold text-4x2 md:hover:scale-[110%] hover:scale-[105%] hoverImgEffect" style="font-size: 40px; white-space: nowrap;">
 
 				<!-- draws the directory and other effects (which are very pretty) -->
 				<nav class="flex-wrap flex justify-center space-x-4 pb-10">
@@ -141,30 +141,39 @@ Hope you have a great day, friend!
 			</span>
 		</div>
 
+		<!-- line separating bio and bottom -->
+		<div class="flex justify-center mb-28">
+			<hr class="md:w-[52%] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
+		</div>
+
 
 		<!-- featured work -->
-		<div>
-
-
+		<div class="mt-64 ">
 			<!-- featured text -->
-
+			<div class="flex m-auto justify-center mt-24">
+				<span class="font-extrabold bg-blue-500 text-transparent bg-clip-text" style="font-size: 76px;">
+					Featured Work
+				</span>
+			</div>
 
 			<!-- item cards -->
-			 <div class="flex flex-row flex-wrap mb-4 justify-center">
-				{
-					projects.map((projects) => (
-						<ItemCard
-						title={projects.data.title}
-						description={projects.data.description}
-						date={projects.data.publishDate}
-						slug={projects.slug}
-						img={projects.data.img}
-						img_alt={projects.data.img_alt}
-						tags={projects.data.tags}
-						/> 
-					</>
-					))
-				}
+			<div class="flex justify-center">
+				<div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 scale-x-75 scale-y-75">
+					{
+						projects.map((projects) => (
+							<ItemCard
+							title={projects.data.title}
+							description={projects.data.description}
+							date={projects.data.publishDate}
+							slug={projects.slug}
+							img={projects.data.img}
+							img_alt={projects.data.img_alt}
+							tags={projects.data.tags}
+							/> 
+						</>
+						))
+					}
+				</div>
 			</div>
 		</div>
 
