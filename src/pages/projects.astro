@@ -1,15 +1,11 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-
-
+import ItemCard from '../components/ItemCard.astro'
 import { getCollection } from 'astro:content';
 
-/*
-const projects = (await getCollection('projects'));
-projects.filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 1);
-*/
+const projects = (await getCollection('projects'))
+  .filter((post) => !post.data.draft)
+  .slice(0, 4);
 ---
 
 <!--
@@ -37,48 +33,31 @@ projects.filter((post) => !post.data.draft)
 
         <!-- displays various projects with links leading to more information -->
             <!-- TODO: Try to implement functional versions of these projects! -->
-        <main>
+        <main class="md:p-4">
 
             <!-- creates board of coding projects! -->
-            <span style="white-space: nowrap; padding-bottom: 20px; padding-top: 30px;">
+            <div class="mt-20">
                 
-                <!-- draws the directory and other effects (which are very pretty) -->
-                    <!-- TODO: maybe make these link to different pages with more explanation instead -->
-
-                <!-- 
-                <div class="">
-                    <ul class="flex flex-row flex-wrap mb-4 justify-center">
-                    {
-                    projects.map((projects) => (
-                        <>
-                        <div class=" xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-full p-4">
-                            <a
-                            href={`/projects/${projects.slug}`}
-                            class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden hover:scale-[105%] hoverImgEffect"
-                            >
-                            <div class="relative pb-48 overflow-hidden">
-                                <img
-                                class="absolute inset-0 h-full w-full object-cover"
-                                src={projects.data.img}
-                                alt={projects.data.img_alt}
-                                />
-                            </div>
-                            <div class="p-4">
-                                {projects.data.tags.map((tag) => (
-                                    <span class="inline-block px-2 mr-1 py-1 leading-none bg-blue-200 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs"> {tag}</span>
-                                ))}
-                                <h2 class="mt-2 mb-2  font-bold">{projects.data.title}</h2>
-                                <p class="text-sm">{projects.data.description}</p>
-                            </div>
-                            </a>
-                        </div>
-                        </>
-                    ))
-                    }
-                    </ul>
+                <!-- item cards for projects -->
+                <div class="flex justify-center">
+                    <div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 scale-x-75 scale-y-75">
+                        {
+                            projects.map((projects) => (
+                                <ItemCard
+                                title={projects.data.title}
+                                description={projects.data.description}
+                                date={projects.data.publishDate}
+                                slug={projects.slug}
+                                img={projects.data.img}
+                                img_alt={projects.data.img_alt}
+                                tags={projects.data.tags}
+                                /> 
+                            </>
+                            ))
+                        }
+                    </div>
                 </div>
-                -->
-            </span>
+            </div>
         </main>
 
         <!-- standard copyright info footer 
