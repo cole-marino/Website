@@ -1,11 +1,10 @@
 ---
-
 interface ItemCardProps {
   title: string;
   projType: string;
   description: string;
   publishDate: string;
-  tags: any;
+  tags: any; // this was string but made it to any
   img: string;
   img_alt: string;
   slug: string;
@@ -16,6 +15,19 @@ const { title, description, projType, publishDate, slug, tags, img, img_alt } =
 
 
 ---
+
+<!-- 
+  This is the template for an item card which portrays a simple, linkable, amount of data.
+
+    @Author: Cole Marino
+    @Author: cole1.marino@gmail.com
+
+    This was mostly created to represent my personal coding projects. 
+      Each card will contain an image at the top, with a title and description at the bottom - and the whole thing can link to another url.
+
+    
+    Cards refer to .mdx files (contained in /src/content/projects, for example)
+ -->
 
 
 
