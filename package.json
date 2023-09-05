@@ -16,6 +16,12 @@
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
-  }
+    "@tailwindcss/typography": "^0.5.9",
+    "typescript": "^5.2.2"
+  },
+  "description": "```\r npm create astro@latest -- --template minimal\r ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
