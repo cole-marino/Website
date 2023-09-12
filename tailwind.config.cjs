@@ -18,23 +18,23 @@ module.exports = {
 			'7xl': '5rem',
 
 			// header font sizes
-			'h-xm': '43px',		// extra small screen
-			'h-sm': '52px',		// small screen
-			'h-md': '75px',		// medium screen
+			'h-xm': '50px',		// extra small screen
+			'h-sm': '75px',		// small screen
+			'h-md': '80px',		// medium screen
 			'h-lg': '100px',	// large screen
 			'h-xl': '100px',	// extra large screen
 
 			// title text font sizes
-			'tt-xm': '25px',
-			'tt-sm': '28px',
-			'tt-md': '38px',
+			'tt-xm': '30px',
+			'tt-sm': '35px',
+			'tt-md': '40px',
 			'tt-lg': '42px',
 			'tt-xl': '42px',	
 
 			// main text font sizes
 			't-xm': '15px',
 			't-sm': '20px',
-			't-md': '24px',
+			't-md': '24px',		// my phone size
 			't-lg': '28px',
 			't-xl': '28px',		// display size
 		},
