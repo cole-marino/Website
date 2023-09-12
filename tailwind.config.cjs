@@ -19,8 +19,8 @@ module.exports = {
 
 			// header font sizes
 			'h-xm': '50px',		// extra small screen
-			'h-sm': '75px',		// small screen
-			'h-md': '80px',		// medium screen
+			'h-sm': '68px',		// small screen
+			'h-md': '75px',		// medium screen
 			'h-lg': '100px',	// large screen
 			'h-xl': '100px',	// extra large screen
 
