@@ -29,7 +29,6 @@ Hope you have a great day, friend!
 -CVM
 -->
 
-<!DOCTYPE html>
 <DefaultLayout title={"Nicola Vittorio Marino"}>
 
 	<style is:global>
@@ -55,8 +54,13 @@ Hope you have a great day, friend!
 	<body>
 		<!-- header! -->
 		<head>
-			<h1 class="lg:px-8 md:mb-4 mb-12" style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
-				<b>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="generator" content={Astro.generator} />
+
+			<h1 class="sm:pt-[5%] md:pt-[5%] md:mb-4 mb-12 lg:px-8" style= "text-shadow: 5px 5px black; color: white; text-align:center; font-family:verdana;"> <!-- font-size:100px; -->
+				<b class="text-h-sm xm:text-h-xm md:text-h-md lg:text-h-lg xl:text-h-xl">
 					Hello there! 👋
 				</b>
 
@@ -69,11 +73,11 @@ Hope you have a great day, friend!
     <main class="md:p-4">
 
         <!-- center main information -->
-        <div class="m-auto max-w-7xl mt-12">
+        <div class="m-auto max-w-7xl md:mt-12 lg:mt-12 mt-0">
             <div class="m-auto flex max-w-4xl gap-y-2 md:max-w-none items-center justify-center gap-4 flex-col md:flex-row">
 
                 <!-- composite image -->
-				<div class="scale-[100%]">
+				<div class="scale-[75%] md:scale-[100%] lg:scale-[100%]">
 					<div class="m-auto md:hover:scale-[110%] hover:scale-[105%] block shadow-lg rounded-2xl hoverImgEffect">
 						<a href="./contact">
 							<img src="./images/COMPOSITE.png" alt="Composite" class="rounded-2xl" id="compositePNG">
@@ -84,15 +88,15 @@ Hope you have a great day, friend!
                 <!-- personal description -->
 				<div class="text-center px-8">
 
-					<div class="py-12">
+					<div class="md:py-12 lg:py-12">
 						<p class="font-extrabold" style="font-family: Verdana;">
-							<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text" style="font-size: 42px;">
+							<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text xm:text-tt-xm text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl" style="">
 								Welcome to my website
 							</span>
 						</p>
 
 						
-						<div style="font-size: 28px;">
+						<div class="xm:text-t-xm text-t-sm md:text-t-md lg:text-t-lg xl:text-t-xl" style="">
 							<br>
 								I am 
 								<span class="h-72 bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text font-extrabold">
@@ -110,14 +114,15 @@ Hope you have a great day, friend!
         </div>
 
 		<!-- line separating bio and bottom -->
+			<!-- MAKE ALL WIDTHS IN PX -->
 		<div class="flex justify-center mt-28 mb-8">
-			<hr class="md:w-[52%] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
+			<hr class="md:w-[52%] lg:w-[52%] xl:w-[1216px] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
 		</div>
 
 
         <!-- web page directory -->
         <div>
-			<span class="font-bold text-4x2 md:hover:scale-[110%] hover:scale-[105%] hoverImgEffect" style="font-size: 40px; white-space: nowrap;">
+			<span class="font-bold text-4x2 md:hover:scale-[110%] hover:scale-[105%] hoverImgEffect" style="white-space: nowrap;">
 
 				<!-- draws the directory and other effects (which are very pretty) -->
 				<nav class="flex-wrap flex justify-center space-x-4 pb-10">
@@ -127,11 +132,11 @@ Hope you have a great day, friend!
 					['👨‍💻', ' Projects', './projects'],
 					['👨🏻‍🔧', ' Services', './services'],
 					].map(([emoji, title, url]) => (
-						<a href={url} class="transition px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%]" style="padding-left= 1%; padding-right: 1%;">
+						<a href={url} class="transition px-2 py-2 text-slate-900 font-medium c-card block hover:shadow-xl rounded-lg overflow-shown hover:scale-[110%] pl-[1%] pr-[1%]">
 							<!-- this needs to be separate so the emoji isnt a weird color -->
 							<p style="font-size: 45px;">
 								{emoji}
-								<span class="bg-gradient-to-r from-blue-800 to-blue-500 font-bold text-transparent hoverImgEffect bg-clip-text" style="font-size: 40px;">
+								<span class="bg-gradient-to-r from-blue-800 to-blue-500 font-bold text-transparent hoverImgEffect bg-clip-text text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl">
 									{title}
 								</span>
 							</p>
@@ -142,14 +147,15 @@ Hope you have a great day, friend!
 		</div>
 
 		<!-- line separating bio and bottom -->
+			<!-- MAKE ALL WIDTHS IN PX -->
 		<div class="flex justify-center mb-28">
-			<hr class="md:w-[52%] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
+			<hr class="md:w-[52%] lg:w-[45%] xl:w-[1088px] w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-500" />
 		</div>
 
 
 		<!-- featured work text -->
 		<div class="flex m-auto justify-center mt-24">
-			<span class="font-extrabold bg-blue-500 text-transparent bg-clip-text" style="font-size: 76px;">
+			<span class="font-extrabold bg-blue-500 text-transparent bg-clip-text xm:text-h-xm text-[50px] md:text-[68px] lg:text-[76px] xl:text-[76px]" style=""> <!-- OG font size was 76px -->
 				Featured Work
 			</span>
 		</div>
@@ -157,8 +163,13 @@ Hope you have a great day, friend!
 		<!-- featured work itel cards -->
 		<div>
 			<!-- item cards -->
+<<<<<<< HEAD
 			<div class="flex justify-center">
 				<div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 scale-x-75 scale-y-75 scroll-smooth">
+=======
+			<div class="flex justify-center scale-[95%] md:scale-[68%] lg:scale-[68%] xl:scale-[68%]">
+				<div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 ">
+>>>>>>> db4e607be9cf28ae88d43b52f5e3f1be1ca70f57
 					{
 						projects.map((projects) => (
 							<ItemCard
