@@ -31,6 +31,13 @@ module.exports = {
 			'tt-lg': '42px',
 			'tt-xl': '42px',	
 
+				// title text font sizes ALTERNATIVE
+				'tta-xm': '42px',
+				'tta-sm': '48px',
+				'tta-md': '50px',
+				'tta-lg': '58px',
+				'tta-xl': '58px',	
+
 			// main text font sizes
 			't-xm': '15px',
 			't-sm': '20px',
