@@ -7,10 +7,11 @@ interface ItemCardProps {
   tags: any; // this was string but made it to any
   img: string;
   img_alt: string;
+  url: string;
   slug: string;
 }
 
-const { title, description, projType, publishDate, slug, tags, img, img_alt } =
+const { title, description, projType, publishDate, slug, tags, img, img_alt, url } =
   Astro.props as ItemCardProps;
 
 
@@ -35,7 +36,7 @@ const { title, description, projType, publishDate, slug, tags, img, img_alt } =
 
     <!-- sets link to redirection when clicked on -->
     <a
-      href={`/${projType}/${slug}`}
+      href={url}
       class="c-card block bg-white dark:bg-gray-700 shadow-md hover:shadow-xl rounded-lg overflow-hidden hover:scale-[105%] hoverImgEffect"
       >
 
