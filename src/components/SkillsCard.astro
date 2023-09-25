@@ -1,0 +1,29 @@
+---
+
+
+interface SkillsCardInterface{
+    title: string;
+    url: string;
+    img: string;
+    img_alt: string;
+}
+
+const{title, url, img, img_alt} = Astro.props as SkillsCardInterface;
+
+---
+
+<div class="">
+    <a href={url} class="group transitionhover:scale-[110%] w-[200px]" target="_blank">
+        <div class="flex items-center justify-between group-hover:scale-105 ease-in-out duration-200 m-auto bg-white rounded-lg drop-shadow-md">
+            <div class="flex flex-row items-center">
+
+                <div class="w-[70px] h-[70px] flex justify-center items-center rounded-full drop-shadow-lg">
+                    <img src={img} alt={'./images/COMPOSITE.png'} height="50" width="40" />
+                </div>
+                <h3 class="text-gray-800 font-medium text-t-sm px-2">{title}</h3>
+            </div>
+        
+        </div>
+    </a>
+
+</div>
