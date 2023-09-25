@@ -2,9 +2,18 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import ItemCard from '../components/ItemCard.astro'
 import { getCollection } from 'astro:content';
+import SkillsCard from '../components/SkillsCard.astro'
+import {csSkills} from "../utils/data.ts";
 const text = 'text';
 const margin = 'margin';
 const info = 'info';
+
+interface SkillsCardProp{
+    title: string;
+    url: string;
+    img: string;
+    img_alt: string;
+}
 
 const projects = (await getCollection('projects'))
   .filter((post) => !post.data.draft)
@@ -176,6 +185,17 @@ Hope you have a great day, friend!
 
 
 					<!-- draws the directory and other effects (which are very pretty) -->
+					<div class="flex flex-row items-center max-w-3xl m-auto flex-wrap overflow-auto">
+						{
+							csSkills.map((tech: SkillsCardProp) => (
+								<div class="md:w-1/3 sm:w-1/2 w-full px-4 py-2">
+									<a href={tech.url} target="_blank" rel="noopener noreferrer" class="cursor-pointer text-black">
+										<SkillsCard {...tech} />
+									</a>
+								</div>
+							))
+						}
+					</div>
 					<nav class="flex-wrap flex justify-center space-x-8 space-y-4 pb-10 pr-64 ml-64 pt-2">
 						{[
 						['AstroHTML', './images/assets/astro.png', 'https://astro.build/'],
