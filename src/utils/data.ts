@@ -1,4 +1,4 @@
-const csSkills=[
+export const csSkills=[
 
     {
         title: 'AstroHTML',
