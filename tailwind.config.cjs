@@ -16,7 +16,12 @@ module.exports = {
 			'4xl': '2.25rem',
 			'5xl': '3rem',
 			'6xl': '4rem',
-			'7xl': '5rem',
+			'h': '6.25rem',
+			'tt': '2.625rem',
+			'tta': '3.625rem',
+			't': '1.75rem',
+			'dir': '2.813rem',
+
 
 			// header font sizes
 			'h-xm': '50px',		// extra small screen
