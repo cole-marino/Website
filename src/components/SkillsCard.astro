@@ -18,12 +18,11 @@ const{title, url, img, img_alt} = Astro.props as SkillsCardInterface;
             <div class="flex flex-row items-center">
 
                 <div class="w-[70px] h-[70px] flex justify-center items-center rounded-full drop-shadow-lg">
-                    <img src={img} alt={'./images/COMPOSITE.png'} height="50" width="40" />
+                    <img src={img} alt={img_alt} height="50" width="40" />
                 </div>
                 <h3 class="text-gray-800 font-medium text-t-sm px-2">{title}</h3>
             </div>
         
         </div>
     </a>
-
 </div>
