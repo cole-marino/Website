@@ -4,6 +4,7 @@ const projectsCollection = defineCollection({
 	schema: z.object({
 		draft: z.boolean(),
 		title: z.string(),
+		gitHub: z.string(),
 		projType: z.string(),
 		description: z.string(),
 		publishDate: z.coerce.date(),
