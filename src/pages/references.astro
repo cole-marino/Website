@@ -1,0 +1,52 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import ItemCard from '../components/ItemCard.astro'
+import { getCollection } from 'astro:content';
+import SkillsCard from '../components/SkillsCard.astro'
+import {csSkills} from "../utils/data.ts";
+
+interface SkillsCardProp{
+    title: string;
+    url: string;
+    img: string;
+    img_alt: string;
+}
+
+const projects = (await getCollection('projects'))
+  .filter((post) => !post.data.draft)
+  .slice(0, 4);
+
+---
+
+<!--
+    This page contains letters of recommendation by professionals.
+
+    @author Cole Marino
+    @author cole1.marino@gmail.com
+ -->
+
+ <DefaultLayout title={"References"}>
+
+    <body>
+        <head>
+            <!-- header! -->
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="generator" content={Astro.generator} />
+
+			<h1 class="sm:pt-[5%] md:pt-[1.5%] mb-4 g:px-8" style= "text-shadow: 5px 5px black; color: white; text-align:center; font-family:verdana;"> <!-- font-size:100px; -->
+				<b class="text-h-sm xm:text-h-xm md:text-h-md lg:text-h-lg xl:text-h-xl">
+					References 👨‍⚖️
+				</b>
+			</h1>
+		</head>
+
+        </head>
+
+        <main>
+
+        </main>
+    </body>
+</DefaultLayout>
