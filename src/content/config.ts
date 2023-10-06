@@ -15,6 +15,18 @@ const projectsCollection = defineCollection({
 	})
 });
 
+const referencesCollection = defineCollection({
+	schema: z.object({
+		name: z.string(),
+		business: z.string(),		// what I did for them
+		tags: z.array(z.string()),
+		body: z.string(), 			// main recommendation text
+		img: z.string(),
+		img_alt: z.string().optional(),
+	})
+});
+
 export const collections = {
 	projects : projectsCollection,
+	references: referencesCollection,
 };
