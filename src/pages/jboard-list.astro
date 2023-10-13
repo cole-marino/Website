@@ -1,0 +1,134 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+---
+
+<!--
+    This page was created to display all current and previous Judicial Board cases 
+        for the Rho Iota chapter of the Alpha Epsilon Pi fraternity.
+
+    @author: Cole Marino
+    @author: cole1.marino@gmail.com
+ -->
+
+
+
+<DefaultLayout title={"AEPi Rho Iota J-Board Cases"}>
+
+
+    <body>
+        <head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="generator" content={Astro.generator} />
+
+			<h1 class="sm:pt-[5%] md:pt-[1.5%] mb-4 g:px-8" style= "text-shadow: 5px 5px black; color: white; text-align:center; font-family:verdana;"> <!-- font-size:100px; -->
+				<b class="text-h-sm xm:text-h-xm md:text-h-md lg:text-h-lg xl:text-h-xl">
+					<u>AEPi Rho Iota</u>
+                    <br>
+                    ⚖️ J-Board Directory ⚖️
+				</b>
+			</h1>
+		</head>
+
+        <main>
+
+            <!-- header for pending cases -->
+            <div class="flex justify-center">
+                <div class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">
+                    <h class = "text-tta-sm xm:text-tta-xm md:text-tta-md lg:text-tta-lg xl:text-tta-xl font-bold">
+                        <u>Pending Cases</u>
+                    </h>
+                </div>
+            </div>
+
+            <!-- pending cases -->
+            <div class = "">
+
+                <!-- cole marino -->
+                <div class="text-transparent bg-clip-text mb-8">
+                    <!-- name -->
+                    <p class="mx-[25%] text-black text-tt-sm xm:text-tt-xm md:text-tt-md lg:text-tt-lg xl:text-tt-xl font-bold">
+                        <u>Cole Marino</u>
+                    </p>
+
+                    <!-- filer -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Filed by Jordan Kasoff
+                    </p>
+
+                    <!-- date filed -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Spring 2023
+                    </p>
+
+                    <!-- purpose for filing -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Skipping two (2) study hours without notification.
+                    </p>
+                </div>
+
+                <!-- Bevan Neiburg -->
+                <div class="text-transparent bg-clip-text mb-8">
+                    <!-- name -->
+                    <p class="mx-[25%] text-black text-tt-sm xm:text-tt-xm md:text-tt-md lg:text-tt-lg xl:text-tt-xl font-bold">
+                        <u>Bevan Neiburg</u>
+                    </p>
+
+                    <!-- filer -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Filed by Cole Marino
+                    </p>
+
+                    <!-- date filed -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        10/07/2023
+                    </p>
+
+                    <!-- purpose for filing -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        No C-Board work/report.
+                    </p>
+                </div>
+
+                <!-- Ryan Quigley -->
+                <div class="text-transparent bg-clip-text mb-8">
+                    <!-- name -->
+                    <p class="mx-[25%] text-black text-tt-sm xm:text-tt-xm md:text-tt-md lg:text-tt-lg xl:text-tt-xl font-bold">
+                        <u>Ryan Quigley (x4)</u>
+                    </p>
+
+                    <!-- filer -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Filed by Cole Marino
+                    </p>
+
+                    <!-- date filed -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        10/12/2023
+                    </p>
+
+                    <!-- purpose for filing -->
+                    <p class="mx-[25%] text-black text-t-sm xm:text-t-xm md:text-t-md lg:text-t-lg xl:text-t-xl font-bold">
+                        Was not present at scheduled times for Israel Philanthropy Event - slept in.
+                    </p>
+                </div>
+            </div>
+
+            <!-- header for completed cases -->
+            <div class="flex justify-center">
+                <div class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">
+                    <h class = "text-tta-sm xm:text-tta-xm md:text-tta-md lg:text-tta-lg xl:text-tta-xl font-bold">
+                        <u>Completed Cases</u>
+                    </h>
+                </div>
+            </div>
+
+            <!-- completed cases -->
+            <div class = "flex justify-">
+
+            </div>
+        </main>
+
+    </body>
+</DefaultLayout>
