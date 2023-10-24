@@ -1,0 +1,33 @@
+---
+interface ReferenceCardProps {
+    name: string;
+    business: string;		// what I did for them
+    tags: any;      // this was string but made it to any for it to work
+    body: string; 			// main recommendation text
+    email: string;
+    img: string;
+    img_alt: string;
+    slug: string;
+}
+
+const { name, business, tags, body, email, img, img_alt, slug } =
+  Astro.props as ReferenceCardProps;
+---
+
+<!-- 
+  This is the template for a reference card which portrays a simple, linkable, amount of data.
+
+    @Author: Cole Marino
+    @Author: cole1.marino@gmail.com
+
+    This was created to represent professional references from my career.
+        Each card will contain a name, their business, email, and a body containing a recommendation letter.
+
+    Cards refer to .mdx files (contained in /src/content/references)
+ -->
+
+<div class="p-4"> <!-- xl:w-1/4 lg:w-1/3 sm:w-1/2 xs:w-full  -->
+
+    
+
+</div>
