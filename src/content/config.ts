@@ -21,6 +21,7 @@ const referencesCollection = defineCollection({
 		business: z.string(),		// what I did for them
 		tags: z.array(z.string()),
 		body: z.string(), 			// main recommendation text
+		email: z.string(),
 		img: z.string(),
 		img_alt: z.string().optional(),
 	})

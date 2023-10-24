@@ -221,6 +221,8 @@ declare module 'astro:content' {
   data: InferEntrySchema<"projects">
 } & { render(): Render[".mdx"] };
 };
+"references": {
+};
 
 	};
 
