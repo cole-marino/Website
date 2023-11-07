@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "postcss-import": "^15.1.0",
     "typescript": "^5.2.2"
   },
   "description": "```\r npm create astro@latest -- --template minimal\r ```",
