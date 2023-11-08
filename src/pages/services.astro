@@ -1,0 +1,46 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import ItemCard from '../components/ItemCard.astro'
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects'))
+  .filter((post) => !post.data.draft)
+  .slice(0, 4);
+---
+
+<!--
+	Shows what services I provide.
+
+	@Author: Cole Marino
+	@Author: cole1.marino@gmail.com
+-->
+
+
+<!DOCTYPE html>
+<DefaultLayout title={"Services"}>
+    <body>
+        <head>
+            <h1 style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:600%; font-family:verdana;">
+                <b>
+                    Services 👨🏻‍🔧
+                </b>
+            </h1>
+        </head>
+
+
+        <main class="md:p-4" style="font-family: Verdana;">
+            <div class="mt-8">
+
+                <!-- Web Devlopment -->
+                <div class="text-center">
+                    <h1 class="xs:text-tta-xm sm:text-tta-sm text-tta-md lg:text-tta-lg xl:text-tta-xl bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text font-extrabold">
+                        Website Development
+                    </h1>
+
+                    
+                </div>
+
+            </div>
+        </main>
+    </body>
+</DefaultLayout>
