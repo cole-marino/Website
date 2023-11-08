@@ -14,7 +14,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
     <body>
         <!-- header -->
         <head>
-            <h1  style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
+            <h1 class="pt-4" style= "text-shadow: 5px 5px black; color: white; text-align:center; font-size:100px; font-family:verdana;">
                 <b>
                     Contact Me 📧
                 </b>
@@ -22,35 +22,40 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
         </head>
 
 
-        <main style="padding-bottom: 2%; padding-top: 3%">
+        <main class="mt-6" style="padding-bottom: 2%;"> <!-- xm:scale-[90%] sm:scale-[95%] md:scale-[95%] lg:scale-[100%] xl:scale-[105%] scale-[100%]  -->
             <!-- contact information -->
             <span class="flex justify-center" style="white-space: nowrap;">
-                <div class = "flex justify-center items-center flex-col md:flex-row" style=" padding-bottom: 0.5%; ">
+                <div class = "flex justify-center items-center flex-col md:flex-row ml-[7%]">
 
                     <!-- temporary image placeholder -->
-                    <div class="scale-[100%]  xs:w-[15%] sm:w-[18%] md:w-[22%] lg:w-[30%] xl:w-[30%]">
+                    <div class="xs:w-[17%] sm:w-[20%] md:w-[23%] lg:w-[26%] xl:w-[24%] ml-[5%]">
                         <img src="/images/convention.png" alt="convention" class="mr-4" style = "border-radius: 5%;" id="conventionPNG">
                     </div>
 
 
                     <!-- draws the directory and other effects (which are very pretty) -->
-                    <div>
-                        <nav class="flex-col flex space-x-4 md:mt-0 mt-8 pb-10" style="font-size: 40px; padding-left: 8%;">
+                    <div class="mt-10">
+                        <nav class="flex-col flex space-x-4 md:mt-0 mt-8 pb-10 mr-[50%]" style="font-size: 40px;">
                             {[
-                                ['📱 Phone:', '+1 (860)930-7049', 'Tel: 123-456-7890'],
-                                ['📧 E-Mail:', 'cole1.marino@gmail.com', 'mailto: cole1.marino@gmail.com'],
-                                ['🔗 LinkedIn:', '\'Nicola Marino\'', 'https://www.linkedin.com/in/nicola-marino-5761601b4/'],
-                                ['👨‍💻 Github:', '@cole-marino', 'https://github.com/cole-marino'],
-                                ['🏫 Github (RIT):', '@cvm4043', 'https://github.com/cvm4043']
+                                ['./public/images/logos/phone.png', 'Phone:', '+1 (860)930-7049', 'Tel: 123-456-7890'],
+                                ['./public/images/logos/mail.png', 'E-Mail:', 'cole1.marino@gmail.com', 'mailto: cole1.marino@gmail.com'],
+                                ['./public/images/logos/linkedin.png', 'LinkedIn:', '\'Nicola Marino\'', 'https://www.linkedin.com/in/nicola-marino-5761601b4/'],
+                                ['./public/images/logos/github.png', 'Github:', '@cole-marino', 'https://github.com/cole-marino'],
+                                ['./public/images/logos/RIT.png', 'Github (RIT):', '@cvm4043', 'https://github.com/cvm4043']
 
-                            ].map(([title, info, url]) => (
-                                <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden hover:scale-[110%] px-8 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+                            ].map(([img, title, info, url]) => (
+                                <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden 
+                                    hover:scale-[105%] px-6 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 leading-tight mb-4">
                                     <!-- links to email and other accounts -->
                                     <a href={url} target="_blank">
-                                    <u>
-                                        <p class="font-extrabold" style="padding-right: 15%; padding-top: 2%;">{title}</p>
-                                    </u>
-                                    <i class="font-bold" style="padding-right: 15%; font-size: 30px;">{info}</i>
+                                        <!-- Image and header text -->
+                                        <u><div class="flex items-center drop-shadow-lg">
+                                            <img src={img} alt="img" class="w-[12%]" id="EmojiPNG"></img>
+                                            <h2 class="font-extrabold ml-1 text-tt-md xs:text-tt-xs sm:text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl text-slate-800">{title}</h2>
+                                        </div></u>
+                                        <i class="font-bold ml-2" style="font-size: 30px;">
+                                            {info}
+                                        </i>
                                     </a>
                                     
                                 </div>
@@ -62,7 +67,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 
             <!-- disclamer -->
-            <div class="mt-4">
+            <div class="">
                 <b>
                     <i class="flex justify-center" style="font-size: 15px; color: black;">
                         *When reaching out, please include your name, affiliation, and purpose for reaching out. Thank you.
