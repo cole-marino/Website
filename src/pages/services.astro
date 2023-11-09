@@ -20,7 +20,7 @@ const projects = (await getCollection('projects'))
 <DefaultLayout title={"Services"}>
     <body>
         <head>
-            <h1 style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:600%; font-family:verdana;">
+            <h1 class="mb-16" style= "padding-top: 1.5%; text-shadow: 5px 5px black; color: white; text-align:center; font-size:600%; font-family:verdana;">
                 <b>
                     Services 👨🏻‍🔧
                 </b>
@@ -28,20 +28,61 @@ const projects = (await getCollection('projects'))
         </head>
 
 
+        <!-- Buffer line -->
+        <div class="flex justify-center">
+			<hr class="w-[90%] my-2 h-2 rounded-md bg-gradient-to-r from-blue-700 to-blue-800" />
+		</div>
+
         <main class="md:p-4" style="font-family: Verdana;">
-            <div class="mt-8">
+            <div class="mx-[10%] mb-8">
 
                 <!-- Web Devlopment -->
-                <div class="text-center">
-                    <h1 class="xs:text-tta-xm sm:text-tta-sm text-tta-md lg:text-tta-lg xl:text-tta-xl">
+                <div class="m-auto">
+                    <h1 class="xs:text-tta-xm sm:text-tta-sm text-tta-md lg:text-tta-lg xl:text-tta-xl mb-8">
                         <span class="bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text font-extrabold">
-                            Website Development
+                            Website Development:
                         </span>
                     </h1>
 
                     <!-- Image and text -->
-                    <div>
+                    <div class="md:mt-8 lg:mt-4">
+                        <div class="m-auto flex max-w-4xl gap-y-2 md:max-w-none items-center gap-4 flex-col md:flex-row">
+                            <!-- web development image -->
+                            <div class="scale-[100%] md:scale-[100%] lg:scale-[50%]">
+                                <div class="m-auto md:hover:scale-[105%] hover:scale-[105%] block shadow-lg rounded-2xl hoverImgEffect">
+                                    <a href="/contact">
+                                        <img src="./images/services/webDev.png" alt="Composite" class="rounded-2xl" id="compositePNG">
+                                    </a>
+                                </div>
+                            </div>
 
+                            <!-- Web development text -->
+                            <div class="xm:text-t-xm text-t-sm md:text-t-md lg:text-t-lg xl:text-t-xl" style="">
+                                <h2><span class="h-72 bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text font-extrabold">
+                                        Want to represent your achievements on-line?
+                                        <br>
+                                        Need a simple showcase for your work?
+                                        <br>
+                                        Need development on existing scripts?
+                                </span></h2>
+                                <p class="ml-8">
+                                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+                                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+                                </p>
+
+                                <!-- 
+                                <br>
+                                    I am 
+                                    <span class="h-72 bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text font-extrabold">
+                                        Nicola Marino
+                                    </span>
+                                    also known as Cole, a dedicated third-year undergraduate student pursuing a Bachelors of Science in Computer Science. 
+                                    My unyielding commitment to the rapidly evolving world of modern technology drives me to continuously advance and excel. 
+                                    Since an early juncture of my life, I've been captivated by programming, critical thinking, and problem-solving. 
+                                    This website showcases all my professional projects, credentials, and services.
+                                </br>-->
+                            </div>
+                        </div>
                     </div>
 
                 </div>
