@@ -206,7 +206,8 @@ Hope you have a great day, friend!
 					<div class="flex justify-center scale-[95%] md:scale-[95%] lg:scale-[95%] xl:scale-[95%]">
 						<div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 ">
 							{
-								projects.map((projects) => (
+								projects.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()).slice(0, 3) // three most recent projects
+								.map((projects) => (
 									<ItemCard
 									title={projects.data.title}
 									description={projects.data.description}
