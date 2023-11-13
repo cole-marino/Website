@@ -44,6 +44,13 @@ module.exports = {
 				'tta-lg': '58px',
 				'tta-xl': '58px',	
 
+			// smaller main text font sizes
+			'st-xm': '10px',
+			'st-sm': '15px',
+			'st-md': '20px',		// my phone size
+			'st-lg': '24px',
+			'st-xl': '24px',		// display size
+
 			// main text font sizes
 			't-xm': '15px',
 			't-sm': '20px',
