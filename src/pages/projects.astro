@@ -2,6 +2,7 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import ItemCard from '../components/ItemCard.astro'
 import { getCollection } from 'astro:content';
+import Footer from '../components/Footer.astro';
 
 const projects = (await getCollection('projects'))
   .filter((post) => !post.data.draft)
@@ -36,14 +37,35 @@ const projects = (await getCollection('projects'))
 
         <!-- displays various projects with links leading to more information -->
             <!-- TODO: Try to implement functional versions of these projects! -->
-        <main class="md:p-4">
+        <main class="md:p-4 m-auto max-w-7xl my-2 mb-8">
+
+            <!-- Personal projects -->
+            <div class="">
+                <h3 class="text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl font-extrabold text-blue-700 mb-2">
+                    Personal Projects:
+                </h3>
+                <p class="italic text-t-sm md:text-t-md lg:text-t-lg xl:text-t-xl font-normal text-black mb-4">
+                    Here are some of my favorite personal projects which I have developed over the years.
+                </p>
+            </div>
+
+            <!-- Academic projects -->
+            <div>
+                <h3 class="text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl font-extrabold text-blue-700 mb-2">
+                    Academic Projects:
+                </h3>
+                <p class="italic text-t-sm md:text-t-md lg:text-t-lg xl:text-t-xl font-normal text-black mb-4">
+                    Here are some Computer Science related projects I have worked on as a student of the Rochester Institute of Technology.
+                </p>
+            </div>
+
 
             <!-- creates board of coding projects! -->
             <div class="mt-8">
                 
                 <!-- item cards for projects -->
                 <div class="flex justify-center">
-                    <div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-6 scale-x-75 scale-y-75">
+                    <div class="grid md:grid-cols-3 grid-cols-1 grid-flow-row justify-evenly gap-4 scale-x-75 scale-y-75">
                         {
                             projects.map((projects) => (
                                 <ItemCard
@@ -63,14 +85,6 @@ const projects = (await getCollection('projects'))
             </div>
         </main>
 
-        <!-- standard copyright info footer 
-        <footer>
-            <i style="font-size: 100%; color: yellow; padding-top: 1%; text-align: center;">
-                *You can click on any of these projects for redirection to a page with greater elaboration.
-            </i>
-            <Footer>
-        </footer>-->
 
     </body>
-
 </DefaultLayout>
