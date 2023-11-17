@@ -29,13 +29,13 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
                     <!-- temporary image placeholder -->
                     <div class="xs:w-[17%] sm:w-[20%] md:w-[23%] lg:w-[26%] xl:w-[24%] ml-[10%]">
-                        <img src="/images/convention.png" alt="convention" class="mr-4" style = "border-radius: 5%;" id="conventionPNG">
+                        <img src="/images/convention.png" alt="convention" class="" style = "border-radius: 5%;" id="conventionPNG">
                     </div>
 
 
                     <!-- draws the directory and other effects (which are very pretty) -->
                     <div class="mt-10">
-                        <nav class="flex-col flex space-x-4 md:mt-0 mt-8 pb-10 mr-[50%]" style="font-size: 40px;">
+                        <nav class="flex-col flex space-x-4 md:mt-0 mt-8 pb-10" style="font-size: 40px;">
                             {[
                                 ['/images/logos/phone.png', 'Phone:', '+1 (860)930-7049', 'Tel: 123-456-7890'],
                                 ['/images/logos/mail.png', 'E-Mail:', 'cole1.marino@gmail.com', 'mailto: cole1.marino@gmail.com'],
@@ -45,12 +45,12 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
                             ].map(([img, title, info, url]) => (
                                 <div class="c-card block hover:shadow-xl rounded-lg overflow-hidden 
-                                    hover:scale-[105%] px-6 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 leading-tight mb-4">
+                                    px-8 hover:scale-[105%] py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 leading-tight mb-4">
                                     <!-- links to email and other accounts -->
                                     <a href={url} target="_blank">
                                         <!-- Image and header text -->
                                         <u><div class="flex items-center drop-shadow-lg">
-                                            <img src={img} alt="img" class="sm:w-[10%] w-[12%]" id="EmojiPNG"></img>
+                                            <img src={img} alt="img" class="w-[6%]" id="EmojiPNG"></img>
                                             <h2 class="font-extrabold ml-1 text-tt-md xs:text-tt-xs sm:text-tt-sm md:text-tt-md lg:text-tt-lg xl:text-tt-xl text-slate-800">{title}</h2>
                                         </div></u>
                                         <i class="font-bold" style="font-size: 30px;">
